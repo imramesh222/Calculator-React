@@ -56,6 +56,7 @@ function App() {
   };
 
   return (
+    <>
     <div
       className="d-flex justify-content-center align-items-center vh-100"
       style={{
@@ -65,9 +66,7 @@ function App() {
         color: darkMode ? colors.darkText : colors.lightText,
       }}
     >
-      <div className="second-calculator">
-        <Link to={"/secondbutton"}><button className="btn btn-primary">Second Calculator</button></Link>
-      </div>
+     
       <div
         className="frame"
         style={{
@@ -112,7 +111,8 @@ function App() {
               height: "70px",
               fontSize: "30px",
               fontWeight: "bold",
-              border: 'none'
+              border: 'none',
+              outline:'none'
 
 
             }}
@@ -133,7 +133,8 @@ function App() {
               fontSize: "20px",
               fontWeight: "bold",
               textAlign: "end",
-              border: 'none'
+              border: 'none',
+              outline:'none'
 
 
             }}
@@ -162,6 +163,7 @@ function App() {
               height: "50px",
               backgroundColor: darkMode
                 ? colors.btnDarkBackground
+                
                 : colors.btnDarkBackground,
               color: darkMode ? colors.darkText : colors.lightText,
               fontSize: "20px",
@@ -296,7 +298,11 @@ function App() {
           </button>
         </div>
       </div>
+      <div className="d-flex" style={{position:'absolute',top:'40px' ,bottom:"0",right:'300px'}}>
+        <Link to={"/secondbutton"}><button className="btn btn-primary" >Second Calculator</button></Link>
+      </div>
     </div>
+    </>
   );
 }
 
