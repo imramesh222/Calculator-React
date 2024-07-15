@@ -52,7 +52,7 @@ function App() {
     btnSecondary: "#6c757d",
     btnDanger: "#dc3545",
     btnDarkBackground: "#469c94",
-    btnLightBackground: "#9fc9cf",
+    btnLightBackground: "#9fc9cf"
   };
 
   return (
@@ -298,8 +298,8 @@ function App() {
           </button>
         </div>
       </div>
-      <div className="d-flex" style={{position:'absolute',top:'40px' ,bottom:"0",right:'300px'}}>
-        <Link to={"/secondbutton"}><button className="btn btn-primary" >Second Calculator</button></Link>
+      <div className="d-flex" style={{position:'relative',top:'-280px' ,bottom:"0",right:'-60px'}}>
+        <Link to="/secondCalculator"><button className="btn btn-primary" >Second Calculator</button></Link>
       </div>
     </div>
     </>
