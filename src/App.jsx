@@ -12,6 +12,14 @@ function App() {
     setDarkMode(!darkMode);
   };
 
+  const calculateResult = () => {
+    try {
+      setResult(eval(input).toString());
+    } catch {
+      setResult("Error");
+    }
+  };
+
   const handleClick = (value) => {
     if (value === "=") {
       calculateResult();
@@ -25,13 +33,7 @@ function App() {
     }
   };
 
-  const calculateResult = () => {
-    try {
-      setResult(eval(input).toString());
-    } catch {
-      setResult("Error");
-    }
-  };
+ 
 
 
   // For immidiate result to appear put inside useEffect
@@ -190,9 +192,9 @@ function App() {
             *
           </button>
 
-          {["7", "8", "9", "-"].map((val, idx) => (
+          {["7", "8", "9", "-"].map((val, index) => (
             <button
-              key={idx}
+              key={index}
               className="btn col-3"
               onClick={() => handleClick(val)}
               style={{
@@ -210,9 +212,9 @@ function App() {
             </button>
           ))}
 
-          {["4", "5", "6", "+"].map((val, idx) => (
+          {["4", "5", "6", "+"].map((val, index) => (
             <button
-              key={idx}
+              key={index}
               className="btn col-3"
               onClick={() => handleClick(val)}
               style={{
@@ -230,9 +232,9 @@ function App() {
             </button>
           ))}
 
-          {["1", "2", "3", "="].map((val, idx) => (
+          {["1", "2", "3", "="].map((val, index) => (
             <button
-              key={idx}
+              key={index}
               className="btn col-3"
               onClick={() => handleClick(val)}
               style={{
